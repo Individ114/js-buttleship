@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery.js"></script>
+    <title>buttle ship</title>
+  </head>
+  <body>
+    <div class="img-logo"><img src="img/logo.png" alt="" /></div>
+    <div class="container">
+      <p class="p1" id="p1Id">[ ]</p>
+      <p class="p2" id="p2Id">[ ]</p>
+      <p class="p3" id="p3Id">[ ]</p>
+      <p class="p4" id="p4Id">[ ]</p>
+      <p class="p5" id="p5Id">[ ]</p>
+      <p class="p6" id="p6Id">[ ]</p>
+      <p class="p7" id="p7Id">[ ]</p>
+    </div>
+    <div class="info">
+      <p>
+        Вам предстоит подбить трёхпалубный авианосец не имея точной навигации.
+        <br />
+        У вас всего 4 выстрела.
+        <br />
+        Вводите координату по одной цифре от 1 до 7.
+        <br />
+        Удачи!
+      </p>
+    </div>
+    <button class="button" id="buttonId">
+      <p>Начать бой</p>
+    </button>
+
+    <script>
+      $("#buttonId").click(function () {
+        var shipArray = [
+          ["1", "2", "3"],
+          ["2", "3", "4"],
+          ["3", "4", "5"],
+          ["4", "5", "6"],
+          ["5", "6", "7"],
+        ];
+        function shipRandom() {
+          return shipArray[Math.floor(Math.random() * shipArray.length)];
+        }
+        var ship = shipRandom();
+        var hits = ["0", "0", "0"];
+        var score = 0;
+        var hit1 = ship[0];
+        var hit2 = ship[1];
+        var hit3 = ship[2];
+        var attempt = 4;
+
+        while (score < 3 && attempt > 0) {
+          var guess = prompt("Выстрелов: " + attempt);
+          var mistake = 0;
+          attempt--;
+          console.log(ship);
+          console.log(hits);
+          if (guess === null) {
+            break;
+          } else if (guess.length !== 1) {
+            alert(`Одну цифру от 1 до 7`);
+          } else {
+            for (var i = 0; i < ship.length; i++) {
+              if (guess === ship[i] && guess !== hits[i]) {
+                hits[i] = ship[i];
+                score++;
+                alert("Попадание!");
+                if (guess === "1") {
+                  $("#p1Id").text("[x]");
+                }
+                if (guess === "2") {
+                  $("#p2Id").text("[x]");
+                }
+                if (guess === "3") {
+                  $("#p3Id").text("[x]");
+                }
+                if (guess === "4") {
+                  $("#p4Id").text("[x]");
+                }
+                if (guess === "5") {
+                  $("#p5Id").text("[x]");
+                }
+                if (guess === "6") {
+                  $("#p6Id").text("[x]");
+                }
+                if (guess === "7") {
+                  $("#p7Id").text("[x]");
+                }
+              } else {
+                mistake++;
+              }
+            }
+            if (mistake === ship.length) {
+              alert(`Промах!`);
+            }
+          }
+        }
+        if (score === 3) {
+          alert(`Корабль уничтожен. Поздравляем!`);
+        } else {
+          alert("Вы не справились. Вас уничтожили!");
+        }
+        location.reload();
+      });
+      //   document.write(ship);
+      //   console.log(ship);
+    </script>
+  </body>
+</html>

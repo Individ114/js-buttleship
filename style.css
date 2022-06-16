@@ -1,0 +1,157 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(img/fon.jpg) center / cover no-repeat;
+}
+.img-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.container {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.p1 {
+  font-size: 45px;
+  position: relative;
+  color: rgb(126, 126, 126);
+}
+.p1::after {
+  content: "1";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 15px;
+  color: black;
+}
+.p2 {
+  font-size: 45px;
+  position: relative;
+  color: rgb(126, 126, 126);
+}
+.p2::after {
+  content: "2";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 15px;
+  color: black;
+}
+.p3 {
+  font-size: 45px;
+  position: relative;
+  color: rgb(126, 126, 126);
+}
+.p3::after {
+  content: "3";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 15px;
+  color: black;
+}
+.p4 {
+  font-size: 45px;
+  position: relative;
+  color: rgb(126, 126, 126);
+}
+.p4::after {
+  content: "4";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 15px;
+  color: black;
+}
+.p5 {
+  font-size: 45px;
+  position: relative;
+  color: rgb(126, 126, 126);
+}
+.p5::after {
+  content: "5";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 15px;
+  color: black;
+}
+.p6 {
+  font-size: 45px;
+  position: relative;
+  color: rgb(126, 126, 126);
+}
+.p6::after {
+  content: "6";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 15px;
+  color: black;
+}
+.p7 {
+  font-size: 45px;
+  position: relative;
+  color: rgb(126, 126, 126);
+}
+.p7::after {
+  content: "7";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 15px;
+  color: black;
+}
+.info {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgb(77, 77, 77);
+}
+.button {
+  width: 200px;
+  height: 50px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button p {
+  text-transform: uppercase;
+}
