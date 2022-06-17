@@ -155,3 +155,7 @@ body {
 .button p {
   text-transform: uppercase;
 }
+span {
+  color: brown;
+  font-weight: 700;
+}
