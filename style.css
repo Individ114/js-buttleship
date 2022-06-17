@@ -29,7 +29,6 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 10px;
 }
 .p1 {
   font-size: 45px;
@@ -143,6 +142,8 @@ body {
   text-align: center;
   font-size: 0.9rem;
   color: rgb(77, 77, 77);
+    padding: 0 10px;
+
 }
 .button {
   width: 200px;
