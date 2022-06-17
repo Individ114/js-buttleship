@@ -145,6 +145,7 @@ body {
   text-align: center;
   font-size: 0.9rem;
   color: rgb(77, 77, 77);
+  padding: 0 15px;
 }
 .button {
   width: 200px;
